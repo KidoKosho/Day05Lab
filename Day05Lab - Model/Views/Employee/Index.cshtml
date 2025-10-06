@@ -1,0 +1,31 @@
+﻿@model IEnumerable<EmployeeManagement.Models.Employee>
+
+<h2>Danh sách nhân viên</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Họ tên</th>
+            <th>Giới tính</th>
+            <th>SĐT</th>
+            <th>Email</th>
+            <th>Lương</th>
+            <th>Trạng thái</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.Id</td>
+                <td>@e.FullName</td>
+                <td>@e.Gender</td>
+                <td>@e.Phone</td>
+                <td>@e.Email</td>
+                <td>@e.Salary</td>
+                <td>@e.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
